@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="341efa2b-9171-4281-a19a-191dc9218001" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Statistic/LAB01/lab01.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Statistic/LAB01/lab01.ipynb" afterDir="false" />
+    <list default="true" id="9c52a039-e0aa-4866-96c3-3e23bd4f353c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/DeepLearning/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DeepLearning/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,12 +10,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
+  "associatedIndex": 6
 }]]></component>
-  <component name="ProjectId" id="2dZqZLW4tNrZvhtgH5peizPpv6V" />
+  <component name="ProjectId" id="2dqf4LAqHdhKgQV2WqW8FJGP6aw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -24,7 +24,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/isdiscodead/Documents/2024_KUS/Spring/deeplearning"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -37,11 +38,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="341efa2b-9171-4281-a19a-191dc9218001" name="Changes" comment="" />
-      <created>1710226003413</created>
+      <changelist id="9c52a039-e0aa-4866-96c3-3e23bd4f353c" name="Changes" comment="" />
+      <created>1710740337038</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1710226003413</updated>
+      <updated>1710740337038</updated>
     </task>
     <servers />
   </component>
