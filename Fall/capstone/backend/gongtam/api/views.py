@@ -1,5 +1,6 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from django.http import JsonResponse
 from rest_framework.parsers import JSONParser
 from ultralytics import YOLO
 import base64
@@ -31,8 +32,19 @@ class ProcessFrameView(APIView):
         results = model.predict(image)  # 추론 수행
 
         # 결과 변환 및 반환
-        response_data = {"detections": results}
-        return Response(response_data)
+        # YOLO 결과에서 필요한 정보 추출
+        predictions = []
+        print(results[0].boxes)
+        for box in results[0].boxes:
+            predictions.append({
+                "bbox": box.xyxy[0].tolist(),  # 바운딩 박스 좌표 [x1, y1, x2, y2]
+                "confidence": float(box.conf[0]),  # 신뢰도 (tensor를 float로 변환)
+                "class": int(box.cls[0]),  # 클래스 ID (tensor를 int로 변환)
+                "label": model.names[int(box.cls[0])]  # 클래스 라벨
+            })
+
+        # JSON 응답으로 반환
+        return JsonResponse({"predictions": predictions}, status=200)
     
     def get(self, request, *args, **kwargs):
         return Response('hi')

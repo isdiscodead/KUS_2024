@@ -73,7 +73,7 @@ const WebcamStream = () => {
         }
       );
       console.log("Server response:", response.data);
-      setResult(response.data);
+      setResult(response.data.predictions); // 예측 결과를 상태로 저장
     } catch (err) {
       console.error("Error capturing or sending frame:", err);
     }
@@ -94,7 +94,15 @@ const WebcamStream = () => {
   return (
     <div>
       <video ref={videoRef} autoPlay muted playsInline />
-      <div>{result && JSON.stringify(result)}</div>
+      <div>
+        {result && result.map((item, index) => (
+          <div key={index}>
+            <p>Label: {item.label}</p>
+            <p>Confidence: {item.confidence.toFixed(2)}</p>
+            <p>BBox: {item.bbox.join(', ')}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
