@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import axios from 'axios';
 
 const WebcamStream = () => {
   const videoRef = useRef(null);
@@ -13,16 +14,21 @@ const WebcamStream = () => {
     const frame = canvas.toDataURL("image/jpeg");
 
     // 서버로 프레임 전송
-    const response = await fetch('http://localhost:8000/api/process_frame/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ frame }),
-    });
-    const data = await response.json();
-    setResult(data);
-  };
+    axios.post('http://localhost:8000/api/process_frame/', 
+      {
+      frame: JSON.stringify({ frame })
+      }, 
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }).then((res) => {
+          console.log(res.data);
+          setResult(res);
+      }).catch((err) => {
+          console.error(err);
+      });
+    };
 
   useEffect(() => {
     const interval = setInterval(captureFrame, 100); // 10FPS
