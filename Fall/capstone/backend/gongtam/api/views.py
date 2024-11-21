@@ -29,7 +29,7 @@ class ProcessFrameView(APIView):
 
         # YOLOv10 모델 추론
         model = YOLO("yolov10n.pt")  # 모델 로드
-        results = model.predict(image)  # 추론 수행
+        results = model.predict(image, classes=[0])  # 추론 수행
 
         # 결과 변환 및 반환
         # YOLO 결과에서 필요한 정보 추출
