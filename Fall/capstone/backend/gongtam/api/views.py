@@ -34,7 +34,6 @@ class ProcessFrameView(APIView):
         # 결과 변환 및 반환
         # YOLO 결과에서 필요한 정보 추출
         predictions = []
-        print(results[0].boxes)
         for box in results[0].boxes:
             predictions.append({
                 "bbox": box.xyxy[0].tolist(),  # 바운딩 박스 좌표 [x1, y1, x2, y2]
